@@ -115,7 +115,7 @@ pt2323.mixed_channel(status=False)
 ## Documentation
 
 For comprehensive details about the PT2323 functionality and usage, please refer to the
-official [PT2323 documentation]().
+official [PT2323 documentation](/PT2323/PT2323_PrincetonTechnology.pdf).
 
 The class documentation offers in-depth explanations, usage examples, and detailed parameter information for each
 method.
