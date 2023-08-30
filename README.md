@@ -67,7 +67,7 @@ pt2323.master_mute(status=True)
 
 # Unmute all channels
 
-pt2323.master_mute(status=False)  # or pt2323.master_mute()
+pt2323.master_mute(status=False)  
 ```
 
 ### Channel Mute
@@ -81,7 +81,7 @@ pt2323.channel_mute(channel=1, status=True)
 
 # Unmute channel 4
 
-pt2323.channel_mute(channel=3, status=False)
+pt2323.channel_mute(channel=3, status=False)  
 ```
 
 ### Enhance Surround
@@ -95,7 +95,7 @@ pt2323.enhance_surround(status=True)
 
 # Disable surround mode
 
-pt2323.enhance_surround(status=False)
+pt2323.enhance_surround(status=False)  
 ```
 
 ### Mixed Channel Setup
@@ -109,7 +109,7 @@ pt2323.mixed_channel(status=True)
 
 # Disable mixed channel setup
 
-pt2323.mixed_channel(status=False)
+pt2323.mixed_channel(status=False) 
 ```
 
 ## Documentation
@@ -159,7 +159,7 @@ on the [repository.]()
 
 ## Credits
 
-This code was created by [zerovijay](https://github.com/zerovijay) We appreciate your contributions to enhance this
+This code was created by [@zerovijay]() We appreciate your contributions to enhance this
 project!
 
 ## License

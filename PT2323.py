@@ -156,10 +156,11 @@ class PT2323:
             :type port: I2C
             :raises ValueError: If the I2C object is not provided.
 
-            The PT2323 is a versatile 6-channel audio selector IC that allows you to manage audio sources in an audio system.
-            This class provides an interface to control the PT2323's input source selection, master mute, individual channel
-            mute, enhance surround mode, and mixed channel setup. It offers a convenient way to integrate audio source
-            management into your projects, enhancing the user experience of audio playback.
+            The PT2323 is a versatile 6-channel audio selector IC that allows you to manage audio sources.
+            This class provides an interface to control the PT2323's input source selection,
+            master mute, individual channel mute, enhance surround mode, and mixed channel setup. 
+            It offers a convenient way to integrate audio source management into your projects,
+            enhancing the user experience of audio playback.
 
             Public Methods:
             - __init__(self, port: I2C = None) -> None:
@@ -183,4 +184,4 @@ class PT2323:
         )
         return description
 
-# The end
+    # The end
