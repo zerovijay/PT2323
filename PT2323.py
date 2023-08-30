@@ -61,7 +61,9 @@ class PT2323:
                     "Oops! The PT2323 encountered a communication error while trying to perform the operation."
                 )
             else:
-                raise RuntimeError(f"Sorry, there was a communication error with the PT2323. The error message: {e}")
+                raise RuntimeError(
+                    f"Sorry, there was a communication error with the PT2323. The error message: {e}"
+                )
 
     def __init_pt2323(self) -> None:
         """
