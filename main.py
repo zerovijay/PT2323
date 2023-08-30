@@ -54,6 +54,7 @@ def main() -> None:
     pt2323.enhance_surround(status=False)
 
     while True:
+        # Main code here.
         utime.sleep(0.1)
 
 
