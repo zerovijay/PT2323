@@ -1,4 +1,4 @@
-# PT2323 6-Channel Audio Selector IC - Python Library
+# PT2323 6-Channel Audio Selector IC - µPython Library
 
 ## Overview
 
@@ -26,7 +26,7 @@ enhance surround mode, and mixed channel setups.
 
 ## Installation
 
-1. Download the `PT2323.py` file from this [repository.]()
+1. Download the `PT2323.py` file from this [repository.](https://github.com/zerovijay/PT2323)
 2. Copy the file to your MicroPython device, placing it in the same directory as your project.
 
 ## Usage
@@ -115,7 +115,7 @@ pt2323.mixed_channel(status=False)
 ## Documentation
 
 For comprehensive details about the PT2323 functionality and usage, please refer to the
-official [PT2323 documentation.]()
+official [PT2323 documentation.](Documents)
 
 The class documentation offers in-depth explanations, usage examples, and detailed parameter information for each
 method.
@@ -125,14 +125,15 @@ method.
 If you're new to the PT2323 6-Channel Audio Selector IC and its usage with the provided MicroPython code, here's how to
 start:
 
-- Clone or download this [repository]() to your local machine.
+- Clone or download this [repository](https://github.com/zerovijay/PT2323) to your local machine.
 - Review the class documentation to understand available methods and usage.
 - Utilize the ` __doc__` or `__str__` method to explore class details.
-- Follow the example usage provided in the Usage section of this [README.md]() file to integrate the PT2323 class into
+- Follow the example usage provided in the Usage section of
+  this [README.md](README.md) file to integrate the PT2323 class into
   your
   project.
 - If you have any suggestions or find issues, feel free to contribute by creating issues or pull requests on
-  the [repository.]()
+  the [repository.](https://github.com/zerovijay/PT2323)
 
 ## Class API Reference
 
@@ -148,7 +149,7 @@ The class methods are documented in the PT2258 class documentation. It includes 
 ## Contributions
 
 If you find any issues or have suggestions for improvements, feel free to contribute by creating issues or pull requests
-on the [repository.]()
+on the [repository.](https://github.com/zerovijay/PT2323)
 
 ## Requirements
 
@@ -159,7 +160,7 @@ on the [repository.]()
 
 ## Credits
 
-This code was created by [@zerovijay]() We appreciate your contributions to enhance this
+This code was created by [@zerovijay](https://github.com/zerovijay) We appreciate your contributions to enhance this
 project!
 
 ## License
