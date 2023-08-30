@@ -73,7 +73,7 @@ class PT2323:
 
         utime.sleep_ms(300)
         if self.__PT2323_ADDR not in self.__I2C.scan():
-            raise OSError("PT2323 not found on the bus!")
+            raise OSError("PT2323 not found on the I2C bus!")
 
     def input_source(self, source: int) -> None:
         """

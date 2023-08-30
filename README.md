@@ -26,7 +26,7 @@ enhance surround mode, and mixed channel setups.
 
 ## Installation
 
-1. Download the `pt2323.py` file from this [repository.]()
+1. Download the `PT2323.py` file from this [repository.]()
 2. Copy the file to your MicroPython device, placing it in the same directory as your project.
 
 ## Usage
@@ -115,7 +115,7 @@ pt2323.mixed_channel(status=False)
 ## Documentation
 
 For comprehensive details about the PT2323 functionality and usage, please refer to the
-official [PT2323 documentation](/PT2323/PT2323_PrincetonTechnology.pdf).
+official [PT2323 documentation.]()
 
 The class documentation offers in-depth explanations, usage examples, and detailed parameter information for each
 method.
@@ -159,7 +159,8 @@ on the [repository.]()
 
 ## Credits
 
-This code was created by [vijay](https://github.com/zerovijay) We appreciate your contributions to enhance this project!
+This code was created by [zerovijay](https://github.com/zerovijay) We appreciate your contributions to enhance this
+project!
 
 ## License
 
