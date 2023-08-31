@@ -186,4 +186,4 @@ class PT2323:
         )
         return description
 
-    # The end
+    # The end.
