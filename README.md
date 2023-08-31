@@ -130,8 +130,7 @@ start:
 - Utilize the ` __doc__` or `__str__` method to explore class details.
 - Follow the example usage provided in the Usage section of
   this [README.md](README.md) file to integrate the PT2323 class into
-  your
-  project.
+  your project.
 - If you have any suggestions or find issues, feel free to contribute by creating issues or pull requests on
   the [repository.](https://github.com/zerovijay/PT2323)
 
