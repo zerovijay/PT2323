@@ -32,7 +32,7 @@ class PT2323:
             0x0B,  # index 3: Input Stereo Group 4
             0x07,  # index 4: 6-Channel Input
         )
-        self.__MUTE_REGISTERS: tuple = (  # Mute register lookup.
+        self.__MUTE_REGISTERS: tuple = (  # Mute registers lookup.
             0xF0,  # index 0: Channel 1 - Front Left mute register.
             0xF2,  # index 1: Channel 2 - Front Right mute register.
             0xF4,  # index 2: Channel 3 - Center mute register.
