@@ -16,10 +16,12 @@ class PT2323:
 
         if port is None:
             raise ValueError("Oops! The I2C object is missing.")
-        self.__I2C: I2C = port
 
+        self.__I2C: I2C = port
         self.__PT2323_ADDR = const(0x94)  # Address of PT2323
-        # Function definition bytes
+        """
+        FUNCTION DEFINITION REGISTERS.
+        """
         self.__INPUT_SWITCH = const(0xC0)
         self.__MASTER_MUTE = const(0xFE)
         self.__ENHANCE_SURROUND = const(0xD0)
@@ -41,6 +43,9 @@ class PT2323:
             0xFA,  # index 5: Channel 6 - Surround Right mute register.
         )
 
+        """
+        Initialize the PT2323 IC.
+        """
         self.__init_pt2323()  # Initialize the PT2323 IC.
 
     def __write_pt2323(self, write_data: int) -> None:
@@ -99,6 +104,7 @@ class PT2323:
 
         :param status: True to mute all channels, False to un_mute.
         :type status: bool
+        :raises ValueError: If the provided status is not a boolean value.
         :return: None
         """
 
@@ -117,6 +123,7 @@ class PT2323:
         :param status: True to mute the channel, False to un_mute.
         :type status: bool
         :raises ValueError: If the channel index is outside the valid range.
+        :raises ValueError: If the provided status is not a boolean value.
         :return: None
         """
 
@@ -135,6 +142,7 @@ class PT2323:
 
         :param status: True to enable surround, False to disable.
         :type status: bool
+        :raises ValueError: If the provided status is not a boolean value.
         :return: None
         """
 
@@ -150,6 +158,7 @@ class PT2323:
 
         :param status: True to enable translation, False to disable.
         :type status: bool
+        :raises ValueError: If the provided status is not a boolean value.
         :return: None
         """
 
