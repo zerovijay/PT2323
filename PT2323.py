@@ -85,9 +85,6 @@ class PT2323:
         :type source: int
         :raises ValueError: If the input source index is outside the valid range.
         :return: None
-        Example:
-        To set the input source to the third stereo group:
-        # pt2323.input_source(2)
         """
 
         if not 0 <= source <= 4:
@@ -104,6 +101,9 @@ class PT2323:
         :type status: bool
         :return: None
         """
+
+        if not isinstance(status, bool):
+            raise ValueError("Oops! Invalid master mute status value. It should be a boolean (True or False).")
 
         self.__write_pt2323(self.__MASTER_MUTE | status)
 
@@ -123,6 +123,9 @@ class PT2323:
         if not 0 <= channel <= 5:
             raise ValueError('Channel index is invalid! It should be within the range of 0 to 5.')
 
+        if not isinstance(status, bool):
+            raise ValueError("Oops! Invalid channel mute status value. It should be a boolean (True or False).")
+
         self.__write_pt2323(self.__MUTE_REGISTERS[channel] | status)
 
     def enhance_surround(self, status: bool = False) -> None:
@@ -134,6 +137,9 @@ class PT2323:
         :type status: bool
         :return: None
         """
+
+        if not isinstance(status, bool):
+            raise ValueError("Oops! Invalid enhance surround status value. It should be a boolean (True or False).")
 
         self.__write_pt2323(self.__ENHANCE_SURROUND | (False if status else True))
 
@@ -147,43 +153,9 @@ class PT2323:
         :return: None
         """
 
+        if not isinstance(status, bool):
+            raise ValueError("Oops! Invalid mixed channel status value. It should be a boolean (True or False).")
+
         self.__write_pt2323(self.__CHANNEL_MIX | status)
-
-    def __str__(self):
-        description = (
-            """
-            Initialize the PT2323 6-Channel Audio Selector IC using I2C communication.
-
-            :param port: An instance of the I2C bus connected to the PT2323.
-            :type port: I2C
-            :raises ValueError: If the I2C object is not provided.
-
-            The PT2323 is a versatile 6-channel audio selector IC that allows you to manage audio sources.
-            This class provides an interface to control the PT2323's input source selection,
-            master mute, individual channel mute, enhance surround mode, and mixed channel setup. 
-            It offers a convenient way to integrate audio source management into your projects,
-            enhancing the user experience of audio playback.
-
-            Public Methods:
-            - __init__(self, port: I2C = None) -> None:
-                Initialize the PT2323 instance.
-
-            - input_source(source: int) -> None:
-                Set the input source for the PT2323.
-
-            - master_mute(status: bool = False) -> None:
-                Enable or disable master mute for all channels.
-
-            - channel_mute(channel: int, status: bool = False) -> None:
-                Enable or disable mute for a specific channel.
-
-            - enhance_surround(status: bool = False) -> None:
-                Enable or disable the surround functionality.
-
-            - mixed_channel(status: bool = False) -> None:
-                Enable or disable the 2-channel to 6-channel translation.
-            """
-        )
-        return description
 
     # The end.

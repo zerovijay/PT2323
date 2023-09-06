@@ -127,8 +127,8 @@ start:
 
 - Clone or download this [repository](https://github.com/zerovijay/PT2323) to your local machine.
 - Review the class documentation to understand available methods and usage.
-- Utilize the ` __doc__` or `__str__` method to explore class details.
-- Follow the example usage provided in the Usage section of
+- Utilize the ` __doc__` method to explore class details.
+- Follow the example usage provided in the [Usage](#usage) section of
   this [README.md](README.md) file to integrate the PT2323 class into
   your project.
 - If you have any suggestions or find issues, feel free to contribute by creating issues or pull requests on
