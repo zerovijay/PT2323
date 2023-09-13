@@ -80,7 +80,7 @@ class PT2323:
 
         utime.sleep_ms(300)
         if self.__PT2323_ADDR not in self.__I2C.scan():
-            raise OSError("PT2323 not found on the I2C bus!")
+            raise OSError("Oops! PT2323 not found on the I2C bus.")
 
     def input_source(self, source: int) -> None:
         """
@@ -93,7 +93,7 @@ class PT2323:
         """
 
         if not 0 <= source <= 4:
-            raise ValueError('Source index is invalid! The input source must be within the range of 0 to 4.')
+            raise ValueError('Oops! Source index is invalid. The input source must be within the range of 0 to 4.')
 
         self.__write_pt2323(self.__INPUT_SWITCH | self.__INPUT_SOURCE[source])
 
@@ -128,7 +128,7 @@ class PT2323:
         """
 
         if not 0 <= channel <= 5:
-            raise ValueError('Channel index is invalid! It should be within the range of 0 to 5.')
+            raise ValueError('Oops! Channel index is invalid. It should be within the range of 0 to 5.')
 
         if not isinstance(status, bool):
             raise ValueError("Oops! Invalid channel mute status value. It should be a boolean (True or False).")
