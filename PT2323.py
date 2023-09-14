@@ -52,6 +52,8 @@ class PT2323:
         """
         Write an instruction to the PT2323.
 
+        Note: This method is not intended for public use.
+
         :param write_data: The instruction data to be written to PT2323.
         :type write_data: int
         :raises RuntimeError: If the PT2323 is not found on the I2C bus or if there is an I2C communication error.
@@ -73,6 +75,8 @@ class PT2323:
     def __init_pt2323(self) -> None:
         """
         Initialize the PT2323 by checking its presence on the I2C bus.
+
+        Note: This method is not intended for public use.
 
         :raises OSError: If the PT2323 is not found on the bus.
         :return: None
