@@ -4,7 +4,6 @@ from micropython import const
 
 
 class PT2323:
-
     def __init__(self, port: I2C = None) -> None:
         """
         Initialize the PT2323 6-Channel Audio Selector IC using I2C communication.
@@ -153,7 +152,7 @@ class PT2323:
         if not isinstance(status, bool):
             raise ValueError("Oops! Invalid enhance surround status value. It should be a boolean (True or False).")
 
-        self.__write_pt2323(self.__ENHANCE_SURROUND | (False if status else True))
+        self.__write_pt2323(self.__ENHANCE_SURROUND | (not status))
 
     def mixed_channel(self, status: bool = False) -> None:
         """
