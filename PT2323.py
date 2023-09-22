@@ -33,6 +33,7 @@ class PT2323:
             0x0B,  # index 3: Input Stereo Group 4
             0x07,  # index 4: 6-Channel Input
         )
+
         self.__MUTE_REGISTERS: tuple = (  # Mute registers lookup.
             0xF0,  # index 0: Channel 1 - Front Left mute register.
             0xF2,  # index 1: Channel 2 - Front Right mute register.
@@ -103,6 +104,7 @@ class PT2323:
     def master_mute(self, status: bool = False) -> None:
         """
         Enable or disable master mute for all channels.
+
         Note: Function by default False.
 
         :param status: True to mute all channels, False to un_mute.
@@ -119,6 +121,7 @@ class PT2323:
     def channel_mute(self, channel: int, status: bool = False) -> None:
         """
         Enable or disable mute for a specific channel.
+
         Note: Function by default False.
 
         :param channel: The channel index to mute. Should be an integer between 0 and 5.
@@ -141,6 +144,7 @@ class PT2323:
     def enhance_surround(self, status: bool = False) -> None:
         """
         Enable or disable the surround functionality.
+
         Note: Function by default False.
 
         :param status: True to enable surround, False to disable.
@@ -157,6 +161,7 @@ class PT2323:
     def mixed_channel(self, status: bool = False) -> None:
         """
         Enable or disable the 2-channel to 6-channel translation.
+
         Note: Function by default False
 
         :param status: True to enable translation, False to disable.
