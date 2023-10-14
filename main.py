@@ -12,7 +12,6 @@ pt2323 = PT2323(port=i2c)
 def channel_config() -> None:
     """
     This function simulate the channels. like 2.1, 4.1 or stereo.
-    Note: The channel_mute function by default False.
 
     :return: None
     """
@@ -21,7 +20,7 @@ def channel_config() -> None:
     pt2323.channel_mute(channel=5, status=True)  # channel SR Muted
 
 
-def main() -> None:
+if __name__ == '__main__':
     print("Hello, World!")
     utime.sleep(1)
     # select the audio sources from 4 Input Stereo Group or one 6 channel input
@@ -56,7 +55,3 @@ def main() -> None:
     while True:
         # Main code here.
         utime.sleep(0.1)
-
-
-if __name__ == '__main__':
-    main()

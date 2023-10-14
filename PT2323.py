@@ -18,15 +18,15 @@ class PT2323:
 
         self.__I2C: I2C = port
         self.__PT2323_ADDR = const(0x94)  # Address of PT2323
-        """
-        FUNCTION DEFINITION REGISTERS.
-        """
+
+        # Function definition registers.
         self.__INPUT_SWITCH = const(0xC0)
         self.__MASTER_MUTE = const(0xFE)
         self.__ENHANCE_SURROUND = const(0xD0)
         self.__CHANNEL_MIX = const(0x90)
 
-        self.__INPUT_SOURCE: tuple = (  # Source index lookup.
+        # Source index lookup.
+        self.__INPUT_SOURCE: tuple = (
             0x08,  # index 0: Input Stereo Group 1
             0x09,  # index 1: Input Stereo Group 2
             0x0A,  # index 2: Input Stereo Group 3
@@ -34,19 +34,18 @@ class PT2323:
             0x07,  # index 4: 6-Channel Input
         )
 
-        self.__MUTE_REGISTERS: tuple = (  # Mute registers lookup.
-            0xF0,  # index 0: Channel 1 - Front Left mute register.
-            0xF2,  # index 1: Channel 2 - Front Right mute register.
-            0xF4,  # index 2: Channel 3 - Center mute register.
-            0xF6,  # index 3: Channel 4 - Subwoofer mute register.
-            0xF8,  # index 4: Channel 5 - Surround Left mute register.
-            0xFA,  # index 5: Channel 6 - Surround Right mute register.
+        # Mute registers lookup.
+        self.__MUTE_REGISTERS: tuple = (
+            0xF0,  # index 0: Channel 1
+            0xF2,  # index 1: Channel 2
+            0xF4,  # index 2: Channel 3
+            0xF6,  # index 3: Channel 4
+            0xF8,  # index 4: Channel 5
+            0xFA,  # index 5: Channel 6
         )
 
-        """
-        Initialize the PT2323 IC.
-        """
-        self.__init_pt2323()  # Initialize the PT2323 IC.
+        # Initialize the PT2323 IC.
+        self.__init_pt2323()
 
     def __write_pt2323(self, write_data: int) -> None:
         """
@@ -62,14 +61,14 @@ class PT2323:
 
         try:
             self.__I2C.writeto(self.__PT2323_ADDR, bytearray([write_data]))
-        except OSError as e:
-            if e.args[0] == 5:
+        except OSError as error:
+            if error.args[0] == 5:
                 raise RuntimeError(
                     "Oops! The PT2323 encountered a communication error while trying to perform the operation."
                 )
             else:
                 raise RuntimeError(
-                    f"Sorry, there was a communication error with the PT2323. The error message: {e}"
+                    f"Sorry, there was a communication error with the PT2323. The error message: {error}"
                 )
 
     def __init_pt2323(self) -> None:

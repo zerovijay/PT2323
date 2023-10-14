@@ -1,4 +1,4 @@
-# PT2323 6-Channel Audio Selector IC - µPython Library
+# PT2323 6-Channel Audio Selector IC - MicroPython Library
 
 ## Overview
 
@@ -8,21 +8,24 @@ enhance surround mode, and mixed channel setups.
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-    - [Initialization](#initialization)
-    - [Setting Input Source](#setting-input-source)
-    - [Master Mute](#master-mute)
-    - [Channel Mute](#channel-mute)
-    - [Enhance Surround](#enhance-surround)
-    - [Mixed Channel Setup](#mixed-channel-setup)
-- [Documentation](#documentation)
-- [Getting Started](#getting-started)
-- [Class API Reference](#class-api-reference)
-- [Contributions](#contributions)
-- [Requirements](#requirements)
-- [Credits](#credits)
-- [License](#license)
+* [PT2323 6-Channel Audio Selector IC - µPython Library](#pt2323-6-channel-audio-selector-ic---µpython-library)
+    * [Overview](#overview)
+    * [Table of Contents](#table-of-contents)
+    * [Installation](#installation)
+    * [Usage](#usage)
+        * [Initialization](#initialization)
+        * [Setting Input Source](#setting-input-source)
+        * [Master Mute](#master-mute)
+        * [Channel Mute](#channel-mute)
+        * [Enhance Surround](#enhance-surround)
+        * [Mixed Channel Setup](#mixed-channel-setup)
+    * [Documentation](#documentation)
+    * [Getting Started](#getting-started)
+    * [Class API Reference](#class-api-reference)
+    * [Contributions](#contributions)
+    * [Requirements](#requirements)
+    * [Credits](#credits)
+    * [License](#license)
 
 ## Installation
 
@@ -52,7 +55,6 @@ Set the input source to route audio stereo group or the 6-channel input:
 
 ```python
 # Set input source to the third stereo group (0-4)
-
 pt2323.input_source(source=2)
 ```
 
@@ -62,11 +64,9 @@ Enable or disable the master mute for all channels:
 
 ```python
 # Mute all channels
-
 pt2323.master_mute(status=True)
 
 # Unmute all channels
-
 pt2323.master_mute(status=False)  
 ```
 
@@ -76,11 +76,9 @@ Enable or disable mute for a specific channel (0-5):
 
 ```python
 # Mute channel 2
-
 pt2323.channel_mute(channel=1, status=True)
 
 # Unmute channel 4
-
 pt2323.channel_mute(channel=3, status=False)  
 ```
 
@@ -90,11 +88,9 @@ Enable or disable the surround sound enhancement:
 
 ```python
 # Enable surround mode
-
 pt2323.enhance_surround(status=True)
 
 # Disable surround mode
-
 pt2323.enhance_surround(status=False)  
 ```
 
@@ -104,11 +100,9 @@ Enable or disable the 2-channel to 6-channel audio translation:
 
 ```python
 # Enable mixed channel setup
-
 pt2323.mixed_channel(status=True)
 
 # Disable mixed channel setup
-
 pt2323.mixed_channel(status=False) 
 ```
 
@@ -127,7 +121,7 @@ start:
 
 - Clone or download this [repository](https://github.com/zerovijay/PT2323) to your local machine.
 - Review the class documentation to understand available methods and usage.
-- Utilize the ` __doc__` method to explore class details.
+- Utilize the ` __doc__` or `help()` method to explore class details.
 - Follow the example usage provided in the [Usage](#usage) section of
   this [README.md](README.md) file to integrate the PT2323 class into
   your project.
